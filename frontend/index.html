@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<title>Salon Beauty</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,500;1,9..144,600&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css" />
+<script src="https://telegram.org/js/telegram-web-app.js"></script>
+</head>
+<body>
+<div id="app">
+  <header class="topbar">
+    <div class="brand">Salon <em>Beauty</em></div>
+    <div class="lang-switch" id="langSwitch">
+      <button data-lang="ru">RU</button>
+      <button data-lang="en">EN</button>
+      <button data-lang="uz">UZ</button>
+    </div>
+  </header>
+
+  <main class="stage">
+    <div class="ticket" id="ticket">
+      <div class="stub">
+        <div class="step-label"><span id="stepEyebrow">STEP</span> <span id="stepNum">01</span>/<span id="stepTotal">05</span></div>
+        <div class="step-title" id="stepTitle">Choose a service</div>
+      </div>
+      <div class="perforation" aria-hidden="true"></div>
+      <div class="ticket-body" id="ticketBody">
+        <div class="loading-row">···</div>
+      </div>
+    </div>
+  </main>
+
+  <nav class="bottombar">
+    <button id="backBtn" class="ghost-btn" type="button">Back</button>
+    <button id="bookingsBtn" class="ghost-btn" type="button">My bookings</button>
+    <button id="primaryBtn" class="primary-btn" type="button" disabled>Continue</button>
+  </nav>
+</div>
+
+<div id="bookingsOverlay" class="overlay hidden">
+  <div class="overlay-card">
+    <div class="overlay-header">
+      <span id="bookingsTitle">Your bookings</span>
+      <button id="closeBookings" class="icon-btn" type="button">✕</button>
+    </div>
+    <div id="bookingsList" class="bookings-list"></div>
+  </div>
+</div>
+
+<div id="toast" class="toast hidden"></div>
+
+<script src="app.js"></script>
+</body>
+</html>
